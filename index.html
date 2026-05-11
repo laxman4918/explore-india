@@ -2,650 +2,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore India through states, culture, food, festivals, famous places, travel guides, hidden gems and interactive travel details." />
-  <meta name="keywords" content="Explore India, Indian states, Indian culture, Indian food, India travel, famous places in India, Incredible India, India guide" />
-  <meta name="author" content="Explore India" />
-  <title>Explore India | States, Culture, Food & Travel Guide</title>
+  <meta name="description" content="Explore all Indian states through culture, food, festivals, languages, famous places and travel guide." />
+  <meta name="keywords" content="Explore India, Indian states, India travel guide, Indian culture, Indian food, famous places in India" />
+  <title>Explore India | Complete States, Culture, Food & Travel Guide</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }:root {
-  --bg: #fffaf3;
-  --text: #172033;
-  --muted: #64748b;
-  --card: #ffffff;
-  --soft: #fff7ed;
-  --border: #fed7aa;
-  --dark: #0f172a;
-  --saffron: #ff9933;
-  --green: #138808;
-  --blue: #0f4c81;
-  --shadow: 0 16px 42px rgba(15, 23, 42, 0.12);
-}
-
-body.dark {
-  --bg: #0b1120;
-  --text: #f8fafc;
-  --muted: #cbd5e1;
-  --card: #111827;
-  --soft: #1e293b;
-  --border: #334155;
-  --dark: #020617;
-  --shadow: 0 16px 42px rgba(0, 0, 0, 0.38);
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-header {
-  min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url("https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1800&q=80");
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-}
-
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 18px;
-  padding: 18px 7%;
-  background: rgba(0, 0, 0, 0.38);
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
-  z-index: 50;
-}
-
-.logo {
-  font-size: 28px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  white-space: nowrap;
-}
-
-.logo span {
-  color: var(--saffron);
-}
-
-nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  list-style: none;
-  gap: 15px;
-}
-
-nav a {
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 14px;
-  transition: color 0.25s ease;
-}
-
-nav a:hover {
-  color: #ffdd8a;
-}
-
-.theme-btn,
-.small-btn,
-.map-btn {
-  border: 0;
-  cursor: pointer;
-  font-weight: 900;
-  border-radius: 999px;
-}
-
-.theme-btn {
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
-  padding: 9px 14px;
-}
-
-.hero {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  padding: 80px 7%;
-}
-
-.hero-content {
-  max-width: 850px;
-}
-
-.badge {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  padding: 9px 16px;
-  border-radius: 999px;
-  font-weight: 900;
-  margin-bottom: 20px;
-}
-
-.hero h1 {
-  font-size: clamp(42px, 7vw, 86px);
-  line-height: 1.04;
-  margin-bottom: 22px;
-}
-
-.hero p {
-  max-width: 730px;
-  font-size: clamp(17px, 2.2vw, 21px);
-  margin-bottom: 32px;
-  color: #f8fafc;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--saffron), var(--green));
-  color: #ffffff;
-  padding: 14px 28px;
-  border-radius: 999px;
-  font-weight: 900;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  border: 0;
-  cursor: pointer;
-}
-
-.btn.secondary {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.38);
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.3);
-}
-
-section {
-  padding: 82px 7%;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 44px;
-}
-
-.section-title h2 {
-  font-size: clamp(30px, 4vw, 42px);
-  color: var(--text);
-  margin-bottom: 10px;
-}
-
-.section-title p {
-  max-width: 760px;
-  margin: auto;
-  color: var(--muted);
-}
-
-.search-box {
-  max-width: 780px;
-  margin: 0 auto 34px;
-  display: flex;
-  gap: 12px;
-  background: var(--card);
-  padding: 12px;
-  border-radius: 999px;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(148, 163, 184, 0.2);
-}
-
-.search-box input {
-  flex: 1;
-  border: 0;
-  outline: 0;
-  background: transparent;
-  color: var(--text);
-  font-size: 16px;
-  padding: 8px 14px;
-}
-
-.search-box button,
-.small-btn,
-.map-btn {
-  background: linear-gradient(135deg, var(--saffron), var(--green));
-  color: #ffffff;
-  padding: 10px 18px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
-}
-
-.card,
-.feature,
-.blog-card,
-.map-panel,
-.contact-box,
-.stat-card {
-  background: var(--card);
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(148, 163, 184, 0.16);
-}
-
-.card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  cursor: pointer;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-}
-
-.card img {
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
-  background: #e5e7eb;
-}
-
-.card-content,
-.blog-card,
-.feature,
-.map-panel,
-.contact-box,
-.stat-card {
-  padding: 24px;
-}
-
-.card-content h3,
-.feature h3,
-.blog-card h3,
-.map-panel h3,
-.contact-box h3,
-.stat-card h3 {
-  font-size: 22px;
-  margin-bottom: 8px;
-  color: var(--text);
-}
-
-.card-content p,
-.feature p,
-.blog-card p,
-.map-panel p,
-.contact-box p,
-.stat-card p {
-  color: var(--muted);
-  font-size: 15px;
-}
-
-.tag {
-  display: inline-block;
-  margin-top: 14px;
-  background: var(--soft);
-  color: var(--text);
-  border: 1px solid var(--border);
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight: 900;
-}
-
-.culture,
-.places,
-.contact,
-.planner {
-  background: var(--card);
-}
-
-.feature-row,
-.stats-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 24px;
-}
-
-.feature {
-  background: var(--soft);
-  border-color: var(--border);
-}
-
-.feature .icon {
-  font-size: 38px;
-  margin-bottom: 12px;
-}
-
-.food,
-.blogs,
-.map-section {
-  background: linear-gradient(180deg, var(--bg), rgba(19, 136, 8, 0.08));
-}
-
-.map-layout {
-  display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: 28px;
-  align-items: stretch;
-}
-
-.india-map {
-  min-height: 420px;
-  border-radius: 28px;
-  background: radial-gradient(circle at top, rgba(255, 153, 51, 0.35), transparent 35%), linear-gradient(135deg, rgba(255, 153, 51, 0.18), rgba(255, 255, 255, 0.1), rgba(19, 136, 8, 0.2));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 28px;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(148, 163, 184, 0.18);
-}
-
-.map-shape {
-  width: min(310px, 90%);
-  filter: drop-shadow(0 18px 26px rgba(15, 23, 42, 0.18));
-}
-
-.map-region {
-  cursor: pointer;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-  transform-origin: center;
-}
-
-.map-region:hover {
-  opacity: 0.82;
-  transform: scale(1.03);
-}
-
-.mini-list {
-  display: grid;
-  gap: 14px;
-  margin-top: 18px;
-}
-
-.mini-item {
-  padding: 16px;
-  border-radius: 18px;
-  background: var(--soft);
-  border: 1px solid var(--border);
-}
-
-.mini-item strong {
-  color: var(--text);
-  display: block;
-  margin-bottom: 4px;
-}
-
-.mini-item span {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.planner-box {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-}
-
-.planner-card {
-  background: var(--soft);
-  border: 1px solid var(--border);
-  padding: 20px;
-  border-radius: 22px;
-}
-
-.planner-card h3 {
-  margin-bottom: 8px;
-}
-
-.quote {
-  text-align: center;
-  background: linear-gradient(135deg, #ff9933, #ffffff, #138808);
-  padding: 76px 7%;
-  color: #111827;
-}
-
-.quote h2 {
-  font-size: clamp(28px, 4vw, 42px);
-  margin-bottom: 12px;
-}
-
-.quote p {
-  font-size: 18px;
-  font-weight: 900;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-
-.contact-box input,
-.contact-box textarea {
-  width: 100%;
-  margin-top: 12px;
-  padding: 13px 14px;
-  border: 1px solid rgba(148, 163, 184, 0.35);
-  background: var(--bg);
-  color: var(--text);
-  border-radius: 14px;
-  outline: none;
-  font-size: 15px;
-}
-
-.contact-box textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.contact-box button {
-  margin-top: 14px;
-}
-
-.modal {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  background: rgba(2, 6, 23, 0.72);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 18px;
-}
-
-.modal.open {
-  display: flex;
-}
-
-.modal-box {
-  width: min(980px, 100%);
-  max-height: 90vh;
-  overflow: auto;
-  background: var(--card);
-  color: var(--text);
-  border-radius: 28px;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4);
-  position: relative;
-}
-
-.modal-hero {
-  height: 280px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.modal-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.65));
-}
-
-.close-btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  z-index: 2;
-  width: 42px;
-  height: 42px;
-  border-radius: 999px;
-  border: 0;
-  background: rgba(255, 255, 255, 0.92);
-  color: #111827;
-  font-size: 22px;
-  cursor: pointer;
-  font-weight: 900;
-}
-
-.modal-title {
-  position: absolute;
-  left: 28px;
-  bottom: 24px;
-  z-index: 2;
-  color: #ffffff;
-}
-
-.modal-title h2 {
-  font-size: clamp(30px, 5vw, 52px);
-  line-height: 1;
-  margin-bottom: 8px;
-}
-
-.modal-content {
-  padding: 28px;
-}
-
-.detail-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 16px;
-  margin: 22px 0;
-}
-
-.detail-box {
-  background: var(--soft);
-  border: 1px solid var(--border);
-  padding: 18px;
-  border-radius: 18px;
-}
-
-.detail-box h4 {
-  margin-bottom: 8px;
-  color: var(--text);
-}
-
-.detail-box p,
-.detail-box li {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.detail-box ul {
-  padding-left: 18px;
-}
-
-.hidden {
-  display: none;
-}
-
-footer {
-  background: var(--dark);
-  color: #ffffff;
-  text-align: center;
-  padding: 34px 7%;
-}
-
-footer span {
-  color: var(--saffron);
-  font-weight: 900;
-}
-
-@media (max-width: 900px) {
-  nav {
-    flex-direction: column;
-    padding: 18px 6%;
-  }
-
-  .hero {
-    text-align: center;
-    justify-content: center;
-    padding: 70px 6%;
-  }
-
-  .hero-actions {
-    justify-content: center;
-  }
-
-  section {
-    padding: 66px 6%;
-  }
-
-  .map-layout,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 520px) {
-  .logo {
-    font-size: 24px;
-  }
-
-  nav ul {
-    gap: 11px;
-    font-size: 14px;
-  }
-
-  .search-box {
-    border-radius: 22px;
-    flex-direction: column;
-  }
-
-  .card img {
-    height: 170px;
-  }
-
-  .modal-content {
-    padding: 20px;
-  }
-
-  .modal-hero {
-    height: 230px;
-  }
-}
-
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#fffaf3;--text:#172033;--muted:#64748b;--card:#fff;--soft:#fff7ed;--border:#fed7aa;--dark:#0f172a;--saffron:#ff9933;--green:#138808;--blue:#0f4c81;--shadow:0 16px 42px rgba(15,23,42,.12)}
+    body.dark{--bg:#0b1120;--text:#f8fafc;--muted:#cbd5e1;--card:#111827;--soft:#1e293b;--border:#334155;--dark:#020617;--shadow:0 16px 42px rgba(0,0,0,.38)}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.6;transition:.3s}
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    header{min-height:100vh;background:linear-gradient(rgba(0,0,0,.64),rgba(0,0,0,.64)),url("https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1800&q=80");background-size:cover;background-position:center;color:#fff;display:flex;flex-direction:column}
+    nav{width:100%;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:18px 7%;background:rgba(0,0,0,.38);backdrop-filter:blur(10px);position:sticky;top:0;z-index:50}
+    .logo{font-size:28px;font-weight:900;letter-spacing:1px;white-space:nowrap}.logo span{color:var(--saffron)}
+    nav ul{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;list-style:none;gap:15px}nav a{color:#fff;font-weight:700;font-size:14px}nav a:hover{color:#ffdd8a}
+    .theme-btn,.btn,.map-btn,.chip{border:0;cursor:pointer;font-weight:900;border-radius:999px}.theme-btn{border:1px solid rgba(255,255,255,.45);background:rgba(255,255,255,.12);color:#fff;padding:9px 14px}
+    .hero{flex:1;display:flex;align-items:center;padding:80px 7%}.hero-content{max-width:870px}.badge{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);padding:9px 16px;border-radius:999px;font-weight:900;margin-bottom:20px}.hero h1{font-size:clamp(42px,7vw,86px);line-height:1.04;margin-bottom:22px}.hero p{max-width:730px;font-size:clamp(17px,2.2vw,21px);margin-bottom:32px;color:#f8fafc}.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--saffron),var(--green));color:#fff;padding:14px 28px;box-shadow:0 12px 28px rgba(0,0,0,.25);transition:.25s}.btn.secondary{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.38)}.btn:hover{transform:translateY(-2px)}
+    section{padding:82px 7%}.section-title{text-align:center;margin-bottom:44px}.section-title h2{font-size:clamp(30px,4vw,42px);color:var(--text);margin-bottom:10px}.section-title p{max-width:780px;margin:auto;color:var(--muted)}
+    .search-box{max-width:780px;margin:0 auto 24px;display:flex;gap:12px;background:var(--card);padding:12px;border-radius:999px;box-shadow:var(--shadow);border:1px solid rgba(148,163,184,.2)}.search-box input{flex:1;border:0;outline:0;background:transparent;color:var(--text);font-size:16px;padding:8px 14px}.search-box button,.map-btn{background:linear-gradient(135deg,var(--saffron),var(--green));color:#fff;padding:10px 18px}
+    .filter-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:0 0 34px}.chip{background:var(--soft);border:1px solid var(--border);color:var(--text);padding:9px 14px}.chip.active{background:linear-gradient(135deg,var(--saffron),var(--green));color:#fff}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}.card,.feature,.blog-card,.map-panel,.contact-box,.stat-card,.planner-card{background:var(--card);border-radius:24px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(148,163,184,.16)}.card{transition:.25s;cursor:pointer}.card:hover{transform:translateY(-8px)}.card img{width:100%;height:190px;object-fit:cover;background:#e5e7eb}.card-content,.blog-card,.feature,.map-panel,.contact-box,.stat-card,.planner-card{padding:24px}.card-content h3,.feature h3,.blog-card h3,.map-panel h3,.contact-box h3,.stat-card h3,.planner-card h3{font-size:22px;margin-bottom:8px;color:var(--text)}.card-content p,.feature p,.blog-card p,.map-panel p,.contact-box p,.stat-card p,.planner-card p{color:var(--muted);font-size:15px}.tag{display:inline-block;margin-top:14px;background:var(--soft);color:var(--text);border:1px solid var(--border);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:900}
+    .culture,.places,.contact,.planner{background:var(--card)}.feature-row,.stats-row,.planner-box{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px}.feature,.planner-card{background:var(--soft);border-color:var(--border)}.feature .icon{font-size:38px;margin-bottom:12px}.food,.blogs,.map-section{background:linear-gradient(180deg,var(--bg),rgba(19,136,8,.08))}
+    .map-layout{display:grid;grid-template-columns:1fr 1.15fr;gap:28px;align-items:stretch}.india-map{min-height:430px;border-radius:28px;background:radial-gradient(circle at top,rgba(255,153,51,.35),transparent 35%),linear-gradient(135deg,rgba(255,153,51,.18),rgba(255,255,255,.1),rgba(19,136,8,.2));display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px;box-shadow:var(--shadow);border:1px solid rgba(148,163,184,.18)}.map-icon{font-size:92px;line-height:1;margin-bottom:16px}.map-buttons{display:grid;grid-template-columns:repeat(2,minmax(120px,1fr));gap:12px;width:100%;max-width:360px}.map-btn{font-size:14px}.map-btn:hover{transform:translateY(-2px)}.mini-list{display:grid;gap:14px;margin-top:18px}.mini-item{padding:16px;border-radius:18px;background:var(--soft);border:1px solid var(--border)}.mini-item strong{color:var(--text);display:block;margin-bottom:4px}.mini-item span{color:var(--muted);font-size:14px}
+    .quote{text-align:center;background:linear-gradient(135deg,#ff9933,#fff,#138808);padding:76px 7%;color:#111827}.quote h2{font-size:clamp(28px,4vw,42px);margin-bottom:12px}.quote p{font-size:18px;font-weight:900}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.contact-box input,.contact-box textarea{width:100%;margin-top:12px;padding:13px 14px;border:1px solid rgba(148,163,184,.35);background:var(--bg);color:var(--text);border-radius:14px;outline:none;font-size:15px}.contact-box textarea{min-height:120px;resize:vertical}.contact-box button{margin-top:14px}
+    .modal{position:fixed;inset:0;z-index:100;background:rgba(2,6,23,.72);display:none;align-items:center;justify-content:center;padding:18px}.modal.open{display:flex}.modal-box{width:min(980px,100%);max-height:90vh;overflow:auto;background:var(--card);color:var(--text);border-radius:28px;box-shadow:0 24px 70px rgba(0,0,0,.4);position:relative}.modal-hero{height:280px;background-size:cover;background-position:center;position:relative}.modal-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.65))}.close-btn{position:absolute;top:16px;right:16px;z-index:2;width:42px;height:42px;border-radius:999px;border:0;background:rgba(255,255,255,.92);color:#111827;font-size:22px;cursor:pointer;font-weight:900}.modal-title{position:absolute;left:28px;bottom:24px;z-index:2;color:#fff}.modal-title h2{font-size:clamp(30px,5vw,52px);line-height:1;margin-bottom:8px}.modal-content{padding:28px}.detail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin:22px 0}.detail-box{background:var(--soft);border:1px solid var(--border);padding:18px;border-radius:18px}.detail-box h4{margin-bottom:8px;color:var(--text)}.detail-box p,.detail-box li{color:var(--muted);font-size:14px}.hidden{display:none!important}footer{background:var(--dark);color:#fff;text-align:center;padding:34px 7%}footer span{color:var(--saffron);font-weight:900}
+    @media(max-width:900px){nav{flex-direction:column;padding:18px 6%}.hero{text-align:center;justify-content:center;padding:70px 6%}.hero-actions{justify-content:center}section{padding:66px 6%}.map-layout,.contact-grid{grid-template-columns:1fr}}
+    @media(max-width:520px){.logo{font-size:24px}nav ul{gap:11px;font-size:14px}.search-box{border-radius:22px;flex-direction:column}.card img{height:170px}.modal-content{padding:20px}.modal-hero{height:230px}.map-buttons{grid-template-columns:1fr}.map-icon{font-size:72px}}
   </style>
 </head>
 <body>
@@ -653,175 +37,96 @@ footer span {
     <nav aria-label="Main navigation">
       <a href="#home" class="logo">Explore <span>India</span></a>
       <ul>
-        <li><a href="#states">States</a></li>
-        <li><a href="#map">Map</a></li>
-        <li><a href="#culture">Culture</a></li>
-        <li><a href="#food">Food</a></li>
-        <li><a href="#places">Places</a></li>
-        <li><a href="#blogs">Blogs</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#states">States</a></li><li><a href="#map">Map</a></li><li><a href="#culture">Culture</a></li><li><a href="#food">Food</a></li><li><a href="#places">Places</a></li><li><a href="#blogs">Blogs</a></li><li><a href="#contact">Contact</a></li>
       </ul>
       <button class="theme-btn" id="themeBtn">🌙 Dark</button>
-    </nav><div class="hero">
-  <div class="hero-content">
-    <div class="badge">🇮🇳 India ki kahani, duniya ki zubani</div>
-    <h1>Discover the Soul of India</h1>
-    <p>Explore India's states, culture, food, festivals, famous places, hidden gems and travel guides with clickable details.</p>
-    <div class="hero-actions">
-      <a href="#states" class="btn">Explore States</a>
-      <a href="#map" class="btn secondary">Open India Map</a>
+    </nav>
+    <div class="hero">
+      <div class="hero-content">
+        <div class="badge">🇮🇳 India ki kahani, duniya ki zubani</div>
+        <h1>Discover the Soul of India</h1>
+        <p>Explore all 28 Indian states with clickable deep details, culture, food, language, festivals, famous places and travel tips.</p>
+        <div class="hero-actions"><a href="#states" class="btn">Explore All States</a><a href="#map" class="btn secondary">Open India Map</a></div>
+      </div>
     </div>
-  </div>
-</div>
-
   </header>  <main>
     <section class="stats-row" aria-label="Website highlights">
-      <div class="stat-card"><h3>28+ States</h3><p>State-wise culture, food, language and travel identity.</p></div>
-      <div class="stat-card"><h3>Travel Guide</h3><p>Best places, routes, seasons and experience-based ideas.</p></div>
-      <div class="stat-card"><h3>Culture Hub</h3><p>Festivals, traditions, art, music and languages of India.</p></div>
+      <div class="stat-card"><h3>28 States</h3><p>Complete state-wise explore guide with deep details.</p></div>
+      <div class="stat-card"><h3>Clickable Map</h3><p>Open regions and discover related states instantly.</p></div>
+      <div class="stat-card"><h3>Travel + Culture</h3><p>Food, language, festivals, places and best time to visit.</p></div>
     </section><section id="states">
-  <div class="section-title">
-    <h2>States of India</h2>
-    <p>Click any card to open deep details like history, food, language, festivals and tourist places.</p>
+  <div class="section-title"><h2>Explore All Indian States</h2><p>Search, filter by region, and tap any state card to open detailed information.</p></div>
+  <div class="search-box"><input type="text" id="searchInput" placeholder="Search state, food, festival, place, language..." /><button id="clearSearch">Clear</button></div>
+  <div class="filter-row" id="filterRow">
+    <button class="chip active" data-region="all">All</button><button class="chip" data-region="north">North</button><button class="chip" data-region="west">West</button><button class="chip" data-region="central">Central</button><button class="chip" data-region="east">East</button><button class="chip" data-region="south">South</button><button class="chip" data-region="northeast">Northeast</button>
   </div>
-
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search Rajasthan, Kerala, Punjab, food, temples, beaches..." />
-    <button id="clearSearch">Clear</button>
-  </div>
-
-  <div class="grid" id="cardGrid">
-    <article class="card searchable" data-id="rajasthan" data-keywords="rajasthan jaipur desert forts palace dal baati culture">
-      <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=900&q=80" alt="A palace view in Rajasthan" loading="lazy" />
-      <div class="card-content"><h3>Rajasthan</h3><p>Royal forts, desert safaris, folk music and grand palaces.</p><span class="tag">Open Details</span></div>
-    </article>
-
-    <article class="card searchable" data-id="kerala" data-keywords="kerala backwaters ayurveda kathakali coconut dosa nature">
-      <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=80" alt="Kerala backwaters with boats and palm trees" loading="lazy" />
-      <div class="card-content"><h3>Kerala</h3><p>Backwaters, Ayurveda, coconut trees and green landscapes.</p><span class="tag">Open Details</span></div>
-    </article>
-
-    <article class="card searchable" data-id="punjab" data-keywords="punjab golden temple amritsar bhangra lassi makki di roti">
-      <img src="https://images.unsplash.com/photo-1609948543911-7f01ff385be5?auto=format&fit=crop&w=900&q=80" alt="Golden Temple in Punjab" loading="lazy" />
-      <div class="card-content"><h3>Punjab</h3><p>Golden Temple, bhangra, farming culture and warm hospitality.</p><span class="tag">Open Details</span></div>
-    </article>
-
-    <article class="card searchable" data-id="uttarakhand" data-keywords="uttarakhand himalaya kedarnath rishikesh ganga yoga mountains">
-      <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=900&q=80" alt="Himalayan mountains in Uttarakhand" loading="lazy" />
-      <div class="card-content"><h3>Uttarakhand</h3><p>Temples, yoga, rivers, trekking and Himalayan beauty.</p><span class="tag">Open Details</span></div>
-    </article>
-
-    <article class="card searchable" data-id="goa" data-keywords="goa beaches church seafood nightlife portuguese culture">
-      <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80" alt="Beach view in Goa" loading="lazy" />
-      <div class="card-content"><h3>Goa</h3><p>Beaches, churches, seafood, nightlife and coastal vibes.</p><span class="tag">Open Details</span></div>
-    </article>
-
-    <article class="card searchable" data-id="gujarat" data-keywords="gujarat kutch garba dwarka somnath dhokla statue of unity">
-      <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=900&q=80" alt="Indian city architecture" loading="lazy" />
-      <div class="card-content"><h3>Gujarat</h3><p>Garba, Kutch, temples, snacks and powerful heritage.</p><span class="tag">Open Details</span></div>
-    </article>
-
-    <article class="card searchable" data-id="bengal" data-keywords="west bengal kolkata durga puja rasgulla culture literature">
-      <img src="https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=900&q=80" alt="Kolkata city view" loading="lazy" />
-      <div class="card-content"><h3>West Bengal</h3><p>Durga Puja, sweets, literature, art and Kolkata heritage.</p><span class="tag">Open Details</span></div>
-    </article>
-
-    <article class="card searchable" data-id="tamilnadu" data-keywords="tamil nadu temples bharatanatyam dosa chennai madurai culture">
-      <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=900&q=80" alt="South Indian temple architecture" loading="lazy" />
-      <div class="card-content"><h3>Tamil Nadu</h3><p>Ancient temples, classical dance and Dravidian heritage.</p><span class="tag">Open Details</span></div>
-    </article>
-  </div>
+  <div class="grid" id="statesGrid"></div>
 </section>
 
 <section class="map-section" id="map">
-  <div class="section-title">
-    <h2>Interactive India Map</h2>
-    <p>Tap any region on the map to open travel details. This map is made as a simple clickable guide.</p>
-  </div>
-
+  <div class="section-title"><h2>Clickable India Map Guide</h2><p>Tap a region button below the India icon. It will open region details and show states from that region.</p></div>
   <div class="map-layout">
     <div class="india-map">
-      <svg class="map-shape" viewBox="0 0 360 470" role="img" aria-label="Clickable India guide map">
-        <path class="map-region" data-id="north" d="M155 22 L210 45 L240 88 L222 130 L175 120 L132 145 L95 112 L112 58 Z" fill="#ff9933"></path>
-        <path class="map-region" data-id="west" d="M88 140 L138 152 L150 220 L120 280 L65 252 L48 188 Z" fill="#f59e0b"></path>
-        <path class="map-region" data-id="central" d="M150 150 L230 142 L260 210 L222 275 L142 252 Z" fill="#ffffff" stroke="#e5e7eb" stroke-width="3"></path>
-        <path class="map-region" data-id="east" d="M238 140 L302 165 L322 230 L286 270 L230 232 Z" fill="#22c55e"></path>
-        <path class="map-region" data-id="south" d="M138 260 L230 278 L214 360 L178 438 L145 362 Z" fill="#138808"></path>
-        <circle cx="180" cy="216" r="28" fill="#0f4c81" opacity="0.9"></circle>
-        <circle cx="180" cy="216" r="10" fill="#ffffff"></circle>
-      </svg>
-    </div>
-
-    <div class="map-panel">
-      <h3 id="mapTitle">Choose Your Journey</h3>
-      <p id="mapText">Select a region from the map to explore mountains, beaches, history, spirituality, food and culture.</p>
-      <div class="mini-list" id="mapDetails">
-        <div class="mini-item"><strong>North India</strong><span>Himalayas, Delhi, Punjab, Kashmir, Uttarakhand.</span></div>
-        <div class="mini-item"><strong>West India</strong><span>Rajasthan, Gujarat, Maharashtra, Goa.</span></div>
-        <div class="mini-item"><strong>South India</strong><span>Kerala, Tamil Nadu, Karnataka, Andhra, Telangana.</span></div>
-        <div class="mini-item"><strong>East India</strong><span>West Bengal, Odisha, Assam, Northeast India.</span></div>
+      <div class="map-icon">🇮🇳</div>
+      <div class="map-buttons">
+        <button class="map-btn" data-map="north">North India</button><button class="map-btn" data-map="west">West India</button><button class="map-btn" data-map="central">Central India</button><button class="map-btn" data-map="east">East India</button><button class="map-btn" data-map="south">South India</button><button class="map-btn" data-map="northeast">Northeast India</button>
       </div>
+    </div>
+    <div class="map-panel">
+      <h3 id="mapTitle">Choose a Region</h3>
+      <p id="mapText">Click North, South, East, West, Central or Northeast to explore states and travel highlights.</p>
+      <div class="mini-list" id="mapDetails"></div>
     </div>
   </div>
 </section>
 
 <section class="culture" id="culture">
-  <div class="section-title"><h2>Indian Culture</h2><p>Festivals, languages, dance, music, spirituality and family values make India unique.</p></div>
+  <div class="section-title"><h2>Indian Culture</h2><p>India's identity is built on festivals, languages, dance, music, spirituality, family values and unity in diversity.</p></div>
   <div class="feature-row">
-    <article class="feature searchable" data-keywords="festivals diwali holi eid christmas baisakhi onam"><div class="icon">🎉</div><h3>Festivals</h3><p>Diwali, Holi, Eid, Christmas, Baisakhi, Onam and more festivals bring people together.</p></article>
-    <article class="feature searchable" data-keywords="dance music bharatanatyam kathak bhangra garba"><div class="icon">💃</div><h3>Dance & Music</h3><p>Classical and folk art forms show devotion, emotion, celebration and history.</p></article>
-    <article class="feature searchable" data-keywords="traditions namaste family respect elders spiritual"><div class="icon">🛕</div><h3>Traditions</h3><p>Namaste, family bonding, respect for elders and spiritual values are part of life.</p></article>
-    <article class="feature searchable" data-keywords="languages hindi bengali tamil punjabi marathi gujarati"><div class="icon">🗣️</div><h3>Languages</h3><p>India speaks through hundreds of languages, dialects, scripts and local expressions.</p></article>
+    <article class="feature"><div class="icon">🎉</div><h3>Festivals</h3><p>Diwali, Holi, Eid, Christmas, Baisakhi, Onam, Pongal, Durga Puja and many more.</p></article>
+    <article class="feature"><div class="icon">💃</div><h3>Dance & Music</h3><p>Bharatanatyam, Kathak, Bhangra, Garba, folk songs and classical music show India's soul.</p></article>
+    <article class="feature"><div class="icon">🛕</div><h3>Traditions</h3><p>Namaste, respect for elders, family bonding, spirituality and hospitality are part of Indian life.</p></article>
+    <article class="feature"><div class="icon">🗣️</div><h3>Languages</h3><p>India speaks through many languages, dialects, scripts and local expressions.</p></article>
   </div>
 </section>
 
 <section class="food" id="food">
-  <div class="section-title"><h2>Food of India</h2><p>Every region has its own taste, spices, street food and traditional meals.</p></div>
-  <div class="grid">
-    <article class="card searchable" data-id="biryani" data-keywords="biryani rice hyderabad lucknow spices food"><img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=900&q=80" alt="Biryani" loading="lazy" /><div class="card-content"><h3>Biryani</h3><p>Aromatic rice with spices, herbs and regional styles.</p><span class="tag">Open Details</span></div></article>
-    <article class="card searchable" data-id="dosa" data-keywords="dosa south indian sambar chutney"><img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=900&q=80" alt="Dosa" loading="lazy" /><div class="card-content"><h3>Dosa</h3><p>Crispy South Indian classic with chutney and sambar.</p><span class="tag">Open Details</span></div></article>
-    <article class="card searchable" data-id="samosa" data-keywords="samosa street food potato snack"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80" alt="Samosa" loading="lazy" /><div class="card-content"><h3>Samosa</h3><p>Popular street snack filled with spicy potatoes.</p><span class="tag">Open Details</span></div></article>
-    <article class="card searchable" data-id="thali" data-keywords="thali dal roti rice sabzi pickle sweet"><img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=900&q=80" alt="Indian Thali" loading="lazy" /><div class="card-content"><h3>Indian Thali</h3><p>A complete meal with dal, roti, rice, sabzi and sweet.</p><span class="tag">Open Details</span></div></article>
-  </div>
+  <div class="section-title"><h2>Food of India</h2><p>Tap any food card to open details.</p></div>
+  <div class="grid" id="foodGrid"></div>
 </section>
 
 <section class="places" id="places">
-  <div class="section-title"><h2>Famous Places</h2><p>Click to explore monuments, spiritual cities, beaches, mountains and history.</p></div>
-  <div class="grid">
-    <article class="card searchable" data-id="tajmahal" data-keywords="taj mahal agra monument love"><img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80" alt="Taj Mahal" loading="lazy" /><div class="card-content"><h3>Taj Mahal</h3><p>India's iconic symbol of love and architecture.</p><span class="tag">Open Details</span></div></article>
-    <article class="card searchable" data-id="varanasi" data-keywords="varanasi ganga aarti ghats spiritual"><img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=900&q=80" alt="Varanasi" loading="lazy" /><div class="card-content"><h3>Varanasi</h3><p>Ancient ghats, Ganga Aarti and spiritual energy.</p><span class="tag">Open Details</span></div></article>
-    <article class="card searchable" data-id="himalayas" data-keywords="himalayas mountains trekking snow valley"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Himalayas" loading="lazy" /><div class="card-content"><h3>Himalayas</h3><p>Snowy mountains, valleys, treks and peace.</p><span class="tag">Open Details</span></div></article>
-    <article class="card searchable" data-id="delhi" data-keywords="delhi red fort india gate history"><img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=900&q=80" alt="Delhi" loading="lazy" /><div class="card-content"><h3>Historic Delhi</h3><p>Ancient kingdoms, Mughal history and modern India.</p><span class="tag">Open Details</span></div></article>
-  </div>
+  <div class="section-title"><h2>Famous Places</h2><p>Tap any place card to open details.</p></div>
+  <div class="grid" id="placesGrid"></div>
 </section>
 
 <section class="planner" id="planner">
-  <div class="section-title"><h2>Plan Your India Trip</h2><p>A simple planner that makes the website feel like a real travel guide.</p></div>
+  <div class="section-title"><h2>Plan Your India Trip</h2><p>A simple planner to make your website feel like a real travel guide.</p></div>
   <div class="planner-box">
-    <div class="planner-card"><h3>Best for Mountains</h3><p>Uttarakhand, Himachal, Kashmir, Sikkim. Best time: March-June and September-November.</p></div>
-    <div class="planner-card"><h3>Best for Beaches</h3><p>Goa, Kerala, Andaman, Gokarna. Best time: November-February.</p></div>
-    <div class="planner-card"><h3>Best for Heritage</h3><p>Rajasthan, Delhi, Agra, Madhya Pradesh. Best time: October-March.</p></div>
-    <div class="planner-card"><h3>Best for Spiritual Travel</h3><p>Varanasi, Amritsar, Rishikesh, Kedarnath, Madurai, Puri.</p></div>
+    <div class="planner-card"><h3>Mountains</h3><p>Uttarakhand, Himachal Pradesh, Kashmir, Sikkim. Best: March-June and September-November.</p></div>
+    <div class="planner-card"><h3>Beaches</h3><p>Goa, Kerala, Andaman, Karnataka, Odisha. Best: November-February.</p></div>
+    <div class="planner-card"><h3>Heritage</h3><p>Rajasthan, Delhi, Agra, Madhya Pradesh, Bihar. Best: October-March.</p></div>
+    <div class="planner-card"><h3>Spiritual Travel</h3><p>Varanasi, Amritsar, Rishikesh, Kedarnath, Madurai, Puri, Bodh Gaya.</p></div>
   </div>
 </section>
 
 <section class="blogs" id="blogs">
-  <div class="section-title"><h2>Travel Blogs & Stories</h2><p>Use these topics to grow your website on Google with helpful articles.</p></div>
+  <div class="section-title"><h2>Travel Blogs & Stories</h2><p>Use these topics to grow your website on Google.</p></div>
   <div class="grid">
-    <article class="blog-card searchable" data-keywords="hidden places india travel blog"><h3>Top 10 Hidden Places in India</h3><p>Write about less crowded destinations, local experiences and travel tips.</p><span class="tag">Blog Idea</span></article>
-    <article class="blog-card searchable" data-keywords="best indian foods must try travel food"><h3>Best Indian Foods You Must Try</h3><p>Cover famous dishes from North, South, East and West India.</p><span class="tag">Food Guide</span></article>
-    <article class="blog-card searchable" data-keywords="why india unique culture diversity"><h3>Why India is Unique</h3><p>Explain India's diversity, languages, festivals, traditions and people.</p><span class="tag">Culture</span></article>
-    <article class="blog-card searchable" data-keywords="first time india travel guide tips"><h3>First Time India Travel Guide</h3><p>Simple travel tips for safety, transport, food and best seasons.</p><span class="tag">Travel Tips</span></article>
+    <article class="blog-card"><h3>Top 10 Hidden Places in India</h3><p>Write about less crowded destinations, local experiences and travel tips.</p><span class="tag">Blog Idea</span></article>
+    <article class="blog-card"><h3>Best Indian Foods You Must Try</h3><p>Cover famous dishes from North, South, East, West and Northeast India.</p><span class="tag">Food Guide</span></article>
+    <article class="blog-card"><h3>Why India is Unique</h3><p>Explain India's diversity, languages, festivals, traditions and people.</p><span class="tag">Culture</span></article>
+    <article class="blog-card"><h3>First Time India Travel Guide</h3><p>Simple travel tips for safety, transport, food, weather and best seasons.</p><span class="tag">Travel Tips</span></article>
   </div>
 </section>
 
-<section class="quote" aria-label="India quote"><h2>India is not just a country, it is an emotion.</h2><p>Unity in Diversity • Culture • Heritage • Pride</p></section>
+<section class="quote"><h2>India is not just a country, it is an emotion.</h2><p>Unity in Diversity • Culture • Heritage • Pride</p></section>
 
 <section class="contact" id="contact">
   <div class="section-title"><h2>Contact & Collaboration</h2><p>Use this section for travel collaborations, content ideas and feedback.</p></div>
   <div class="contact-grid">
-    <div class="contact-box"><h3>About Explore India</h3><p>Explore India is a digital platform created to represent India's beauty, culture, food, places and people to the world.</p><p style="margin-top: 12px;">Mission: India ko proudly represent karna aur har visitor ko Bharat ki real feeling dikhana.</p></div>
-    <form class="contact-box" onsubmit="sendMessage(event)"><h3>Send a Message</h3><input type="text" id="name" placeholder="Your name" required /><input type="email" id="email" placeholder="Your email" required /><textarea id="message" placeholder="Your message" required></textarea><button class="btn" type="submit">Send Message</button><p id="formStatus" style="margin-top: 12px;"></p></form>
+    <div class="contact-box"><h3>About Explore India</h3><p>Explore India is a digital platform created to represent India's beauty, culture, food, places and people to the world.</p><p style="margin-top:12px">Mission: India ko proudly represent karna aur har visitor ko Bharat ki real feeling dikhana.</p></div>
+    <form class="contact-box" onsubmit="sendMessage(event)"><h3>Send a Message</h3><input type="text" placeholder="Your name" required /><input type="email" placeholder="Your email" required /><textarea placeholder="Your message" required></textarea><button class="btn" type="submit">Send Message</button><p id="formStatus" style="margin-top:12px"></p></form>
   </div>
 </section>
 
@@ -832,116 +137,65 @@ footer span {
       <div class="modal-content" id="modalContent"></div>
     </div>
   </div>  <footer><p>Made with ❤️ for <span>India</span> | Explore India</p></footer>  <script>
-    const details = {
-      rajasthan: {title:"Rajasthan", subtitle:"The royal desert state of India", image:"https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=80", overview:"Rajasthan is famous for royal history, forts, deserts, colorful clothes, folk dance, camel safaris and palace cities.", language:"Hindi, Rajasthani, Marwari", food:"Dal Baati Churma, Laal Maas, Ghewar, Ker Sangri", places:"Jaipur, Udaipur, Jodhpur, Jaisalmer, Pushkar", festival:"Gangaur, Teej, Desert Festival, Pushkar Fair", bestTime:"October to March", tips:"Try local markets, desert safari and palace tours. Carry water in desert areas."},
-      kerala: {title:"Kerala", subtitle:"God's Own Country", image:"https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1200&q=80", overview:"Kerala is known for peaceful backwaters, green hills, Ayurveda, beaches, coconut trees and classical art forms.", language:"Malayalam", food:"Appam, Puttu, Sadya, Fish Curry, Dosa", places:"Alleppey, Munnar, Kochi, Wayanad, Kovalam", festival:"Onam, Vishu, Thrissur Pooram", bestTime:"September to March", tips:"Take a houseboat ride, try Sadya meal and visit tea gardens in Munnar."},
-      punjab: {title:"Punjab", subtitle:"Land of energy, food and devotion", image:"https://images.unsplash.com/photo-1609948543911-7f01ff385be5?auto=format&fit=crop&w=1200&q=80", overview:"Punjab represents warmth, farming culture, bhangra, delicious food, spiritual places and strong hospitality.", language:"Punjabi", food:"Makki di Roti, Sarson da Saag, Lassi, Chole Bhature", places:"Amritsar, Golden Temple, Wagah Border, Patiala", festival:"Baisakhi, Lohri, Gurpurab", bestTime:"October to March", tips:"Visit Golden Temple early morning and enjoy local Punjabi dhabas."},
-      uttarakhand: {title:"Uttarakhand", subtitle:"Mountains, temples and spiritual peace", image:"https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=80", overview:"Uttarakhand is a Himalayan state known for temples, yoga, trekking, rivers, forests and peaceful hill stations.", language:"Hindi, Garhwali, Kumaoni", food:"Aloo Ke Gutke, Kafuli, Chainsoo, Bal Mithai", places:"Kedarnath, Rishikesh, Nainital, Mussoorie, Valley of Flowers", festival:"Kumbh, Nanda Devi Raj Jat, Ganga Dussehra", bestTime:"March to June and September to November", tips:"For treks and temples, check weather and road conditions before travel."},
-      goa: {title:"Goa", subtitle:"Beaches, music and relaxed coastal life", image:"https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80", overview:"Goa is famous for beaches, Portuguese heritage, seafood, churches, nightlife and relaxed travel vibes.", language:"Konkani, Marathi, English, Hindi", food:"Fish Curry, Bebinca, Xacuti, Prawn Curry", places:"Baga, Calangute, Panaji, Old Goa, Dudhsagar Falls", festival:"Goa Carnival, Shigmo, Christmas", bestTime:"November to February", tips:"Explore both North Goa for nightlife and South Goa for peaceful beaches."},
-      gujarat: {title:"Gujarat", subtitle:"Culture, business, temples and white desert", image:"https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=80", overview:"Gujarat is known for Garba, Rann of Kutch, temples, business culture, wildlife and vegetarian food.", language:"Gujarati, Hindi", food:"Dhokla, Thepla, Fafda, Khandvi, Undhiyu", places:"Kutch, Dwarka, Somnath, Statue of Unity, Gir Forest", festival:"Navratri, Uttarayan, Rann Utsav", bestTime:"October to March", tips:"Visit during Navratri or Rann Utsav for the best cultural experience."},
-      bengal: {title:"West Bengal", subtitle:"Art, literature, sweets and Durga Puja", image:"https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80", overview:"West Bengal is known for Kolkata heritage, Durga Puja, literature, music, sweets, tea gardens and Sundarbans.", language:"Bengali, Hindi, English", food:"Rasgulla, Mishti Doi, Fish Curry, Kathi Roll", places:"Kolkata, Darjeeling, Sundarbans, Kalimpong", festival:"Durga Puja, Kali Puja, Poila Boishakh", bestTime:"October to March", tips:"Visit Kolkata during Durga Puja for unforgettable culture and decorations."},
-      tamilnadu: {title:"Tamil Nadu", subtitle:"Temples, classical art and Dravidian heritage", image:"https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80", overview:"Tamil Nadu has ancient temples, classical music, Bharatanatyam, beaches, hill stations and deep cultural history.", language:"Tamil", food:"Dosa, Idli, Sambar, Pongal, Filter Coffee", places:"Chennai, Madurai, Rameswaram, Ooty, Kanyakumari", festival:"Pongal, Tamil New Year, Thaipusam", bestTime:"November to February", tips:"Respect temple dress codes and try traditional meals on banana leaves."},
-      biryani: {title:"Biryani", subtitle:"India's aromatic rice classic", image:"https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=1200&q=80", overview:"Biryani is a royal rice dish cooked with spices, herbs and different regional styles.", language:"Food Origin: Many regional styles", food:"Hyderabadi, Lucknowi, Kolkata, Malabar, Ambur", places:"Hyderabad, Lucknow, Kolkata, Kerala", festival:"Popular in weddings and celebrations", bestTime:"Anytime", tips:"Try different regional biryanis to understand India's food diversity."},
-      dosa: {title:"Dosa", subtitle:"Crispy South Indian favorite", image:"https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=1200&q=80", overview:"Dosa is a thin crispy dish made from fermented rice and lentil batter, served with chutney and sambar.", language:"Food Region: South India", food:"Masala Dosa, Plain Dosa, Rava Dosa, Mysore Dosa", places:"Tamil Nadu, Karnataka, Kerala, Andhra Pradesh", festival:"Common breakfast and daily food", bestTime:"Breakfast or evening", tips:"Try it fresh and crispy with coconut chutney."},
-      samosa: {title:"Samosa", subtitle:"India's favorite street snack", image:"https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1200&q=80", overview:"Samosa is a crispy snack filled with spicy potatoes, peas or other fillings.", language:"Street Food", food:"Aloo Samosa, Punjabi Samosa, Mini Samosa", places:"Available across India", festival:"Tea-time snack and celebration food", bestTime:"Evening snack", tips:"Best with green chutney, tamarind chutney and chai."},
-      thali: {title:"Indian Thali", subtitle:"A complete meal on one plate", image:"https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=1200&q=80", overview:"Thali brings many dishes together: roti, rice, dal, vegetables, pickle, curd and sweet.", language:"Food Culture: All India", food:"Rajasthani, Gujarati, Punjabi, South Indian, Bengali Thali", places:"Across India", festival:"Daily meals and special feasts", bestTime:"Lunch", tips:"Try regional thalis to understand local food culture."},
-      tajmahal: {title:"Taj Mahal", subtitle:"The iconic monument of love", image:"https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80", overview:"The Taj Mahal in Agra is famous worldwide for its white marble beauty and Mughal architecture.", language:"Location: Agra, Uttar Pradesh", food:"Try Agra Petha and Mughlai food", places:"Taj Mahal, Agra Fort, Mehtab Bagh", festival:"Best during sunrise visits", bestTime:"October to March", tips:"Visit early morning for fewer crowds and beautiful light."},
-      varanasi: {title:"Varanasi", subtitle:"Spiritual heart of India", image:"https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1200&q=80", overview:"Varanasi is one of the world's oldest living cities, known for ghats, temples and Ganga Aarti.", language:"Hindi, Bhojpuri", food:"Kachori, Lassi, Banarasi Paan, Chaat", places:"Dashashwamedh Ghat, Kashi Vishwanath, Sarnath", festival:"Dev Deepawali, Ganga Mahotsav", bestTime:"October to March", tips:"Take a sunrise boat ride and attend evening Ganga Aarti."},
-      himalayas: {title:"Himalayas", subtitle:"Mountains, peace and adventure", image:"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80", overview:"The Himalayas offer snow peaks, valleys, spiritual routes, treks, rivers and peaceful villages.", language:"Many local languages", food:"Local pahadi food, momos, tea", places:"Kashmir, Himachal, Uttarakhand, Sikkim", festival:"Mountain fairs and local festivals", bestTime:"March to June and September to November", tips:"Pack warm clothes and respect mountain safety."},
-      delhi: {title:"Historic Delhi", subtitle:"Where old and modern India meet", image:"https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=80", overview:"Delhi has monuments, markets, food streets, museums and modern city life.", language:"Hindi, English, Punjabi, Urdu", food:"Chole Bhature, Paratha, Chaat, Kebabs", places:"Red Fort, India Gate, Qutub Minar, Humayun's Tomb", festival:"Republic Day, Diwali, Eid, Holi", bestTime:"October to March", tips:"Use metro for easy travel and explore Old Delhi food lanes."}
-    };
-
-    const regionDetails = {
-      north: {title:"North India", text:"Mountains, spiritual cities, forts, food and winter landscapes.", items:["Kashmir: valleys and lakes", "Punjab: Golden Temple and food", "Uttarakhand: yoga, Ganga and temples", "Delhi: monuments and markets"]},
-      west: {title:"West India", text:"Royal deserts, white salt desert, beaches, business cities and colorful festivals.", items:["Rajasthan: forts and palaces", "Gujarat: Garba and Kutch", "Goa: beaches and churches", "Maharashtra: Mumbai and caves"]},
-      central: {title:"Central India", text:"Forests, wildlife, ancient temples, caves and heartland culture.", items:["Madhya Pradesh: Khajuraho and wildlife", "Chhattisgarh: waterfalls and tribal culture", "Nagpur region: central connectivity"]},
-      east: {title:"East & Northeast India", text:"Tea gardens, rivers, forests, sweets, festivals and mountain cultures.", items:["West Bengal: Durga Puja and Kolkata", "Odisha: Puri and Konark", "Assam: tea and Brahmaputra", "Northeast: nature and unique cultures"]},
-      south: {title:"South India", text:"Temples, backwaters, beaches, classical art, spices and technology cities.", items:["Kerala: backwaters and Ayurveda", "Tamil Nadu: temples and classical culture", "Karnataka: Bengaluru and heritage", "Telangana/Andhra: biryani and coastal culture"]}
-    };
-
-    const searchInput = document.getElementById("searchInput");
-    const clearSearch = document.getElementById("clearSearch");
-    const searchableItems = document.querySelectorAll(".searchable");
-    const themeBtn = document.getElementById("themeBtn");
-    const modal = document.getElementById("detailModal");
-    const closeModal = document.getElementById("closeModal");
-    const modalHero = document.getElementById("modalHero");
-    const modalTitle = document.getElementById("modalTitle");
-    const modalSubtitle = document.getElementById("modalSubtitle");
-    const modalContent = document.getElementById("modalContent");
-
-    searchInput.addEventListener("input", function () {
-      const query = this.value.toLowerCase().trim();
-      searchableItems.forEach(function (item) {
-        const text = item.innerText.toLowerCase();
-        const keywords = item.getAttribute("data-keywords") || "";
-        const match = text.includes(query) || keywords.toLowerCase().includes(query);
-        item.classList.toggle("hidden", query && !match);
-      });
-    });
-
-    clearSearch.addEventListener("click", function () {
-      searchInput.value = "";
-      searchableItems.forEach(function (item) { item.classList.remove("hidden"); });
-    });
-
-    themeBtn.addEventListener("click", function () {
-      document.body.classList.toggle("dark");
-      themeBtn.textContent = document.body.classList.contains("dark") ? "☀️ Light" : "🌙 Dark";
-    });
-
-    document.querySelectorAll("[data-id]").forEach(function (item) {
-      item.addEventListener("click", function () {
-        const id = item.getAttribute("data-id");
-        if (details[id]) openDetail(id);
-      });
-    });
-
-    function openDetail(id) {
-      const d = details[id];
-      modalHero.style.backgroundImage = `url('${d.image}')`;
-      modalTitle.textContent = d.title;
-      modalSubtitle.textContent = d.subtitle;
-      modalContent.innerHTML = `
-        <p>${d.overview}</p>
-        <div class="detail-grid">
-          <div class="detail-box"><h4>Language / Region</h4><p>${d.language}</p></div>
-          <div class="detail-box"><h4>Famous Food</h4><p>${d.food}</p></div>
-          <div class="detail-box"><h4>Top Places</h4><p>${d.places}</p></div>
-          <div class="detail-box"><h4>Festivals / Culture</h4><p>${d.festival}</p></div>
-          <div class="detail-box"><h4>Best Time</h4><p>${d.bestTime}</p></div>
-          <div class="detail-box"><h4>Travel Tip</h4><p>${d.tips}</p></div>
-        </div>
-        <button class="btn" onclick="closeDetail()">Back to Website</button>
-      `;
-      modal.classList.add("open");
-      modal.setAttribute("aria-hidden", "false");
-    }
-
-    function closeDetail() {
-      modal.classList.remove("open");
-      modal.setAttribute("aria-hidden", "true");
-    }
-
-    closeModal.addEventListener("click", closeDetail);
-    modal.addEventListener("click", function (event) { if (event.target === modal) closeDetail(); });
-    document.addEventListener("keydown", function (event) { if (event.key === "Escape") closeDetail(); });
-
-    document.querySelectorAll(".map-region").forEach(function (region) {
-      region.addEventListener("click", function () {
-        const data = regionDetails[region.getAttribute("data-id")];
-        document.getElementById("mapTitle").textContent = data.title;
-        document.getElementById("mapText").textContent = data.text;
-        document.getElementById("mapDetails").innerHTML = data.items.map(function (item) {
-          return `<div class="mini-item"><strong>${item.split(":")[0]}</strong><span>${item.includes(":") ? item.split(":").slice(1).join(":") : item}</span></div>`;
-        }).join("");
-      });
-    });
-
-    function sendMessage(event) {
-      event.preventDefault();
-      document.getElementById("formStatus").textContent = "Thank you! Your message is ready. Add email service later to receive real messages.";
-      event.target.reset();
-    }
+    const defaultImage="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80";
+    const states=[
+      {id:"andhra",name:"Andhra Pradesh",region:"south",image:"https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=900&q=80",subtitle:"Coastal temples, spicy food and heritage",language:"Telugu",food:"Pulihora, Gongura, Andhra Meals",places:"Tirupati, Visakhapatnam, Vijayawada, Araku Valley",festival:"Ugadi, Sankranti, Brahmotsavam",best:"October to March",overview:"Andhra Pradesh is known for powerful temples, long coastline, spicy cuisine, handlooms and historic Buddhist sites.",tip:"Visit Tirupati early and try authentic Andhra meals."},
+      {id:"arunachal",name:"Arunachal Pradesh",region:"northeast",image:defaultImage,subtitle:"Land of dawn-lit mountains",language:"English, Hindi and local tribal languages",food:"Thukpa, Momos, Bamboo Shoot dishes",places:"Tawang, Ziro Valley, Bomdila, Itanagar",festival:"Losar, Ziro Festival, Solung",best:"October to April",overview:"Arunachal Pradesh is famous for mountains, monasteries, tribal culture, valleys and peaceful landscapes.",tip:"Permits may be required, so plan before travelling."},
+      {id:"assam",name:"Assam",region:"northeast",image:"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",subtitle:"Tea gardens, Brahmaputra and wildlife",language:"Assamese",food:"Assamese Thali, Pitha, Fish Tenga",places:"Kaziranga, Guwahati, Majuli, Sivasagar",festival:"Bihu, Ambubachi Mela",best:"October to April",overview:"Assam is known for tea gardens, one-horned rhinos, river islands, temples and rich cultural festivals.",tip:"Visit Kaziranga during safari season and explore Majuli island."},
+      {id:"bihar",name:"Bihar",region:"east",image:defaultImage,subtitle:"Ancient learning and spiritual history",language:"Hindi, Bhojpuri, Maithili, Magahi",food:"Litti Chokha, Thekua, Khaja",places:"Bodh Gaya, Nalanda, Patna, Rajgir",festival:"Chhath Puja, Sama Chakeva",best:"October to March",overview:"Bihar has deep historical importance with Buddhism, ancient universities, spiritual sites and traditional festivals.",tip:"Bodh Gaya and Nalanda are must-visit heritage places."},
+      {id:"chhattisgarh",name:"Chhattisgarh",region:"central",image:defaultImage,subtitle:"Waterfalls, forests and tribal culture",language:"Hindi, Chhattisgarhi",food:"Chila, Faraa, Bafauri",places:"Chitrakote Falls, Bastar, Raipur, Sirpur",festival:"Bastar Dussehra, Hareli",best:"October to March",overview:"Chhattisgarh is known for waterfalls, forests, tribal traditions, temples and natural beauty.",tip:"Visit Chitrakote Falls after monsoon for a grand view."},
+      {id:"goa",name:"Goa",region:"west",image:"https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80",subtitle:"Beaches, churches and coastal vibes",language:"Konkani",food:"Fish Curry, Bebinca, Xacuti",places:"Baga, Panaji, Old Goa, Dudhsagar Falls",festival:"Goa Carnival, Christmas, Shigmo",best:"November to February",overview:"Goa is famous for beaches, Portuguese heritage, seafood, churches, music and relaxed travel life.",tip:"Explore both North Goa for nightlife and South Goa for peace."},
+      {id:"gujarat",name:"Gujarat",region:"west",image:"https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=900&q=80",subtitle:"Garba, white desert and temples",language:"Gujarati",food:"Dhokla, Thepla, Fafda, Undhiyu",places:"Kutch, Dwarka, Somnath, Statue of Unity, Gir",festival:"Navratri, Uttarayan, Rann Utsav",best:"October to March",overview:"Gujarat is known for Garba, temples, business culture, wildlife, vegetarian food and the white desert of Kutch.",tip:"Visit during Navratri or Rann Utsav for the best experience."},
+      {id:"haryana",name:"Haryana",region:"north",image:defaultImage,subtitle:"Farming, sports and historic Kurukshetra",language:"Hindi, Haryanvi",food:"Bajra Roti, Kadhi, Churma",places:"Kurukshetra, Gurugram, Sultanpur, Pinjore",festival:"Gita Jayanti, Teej",best:"October to March",overview:"Haryana is known for agriculture, sports culture, modern cities, folk traditions and Mahabharata history.",tip:"Visit Kurukshetra for spiritual and historical importance."},
+      {id:"himachal",name:"Himachal Pradesh",region:"north",image:"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",subtitle:"Hill stations, valleys and adventure",language:"Hindi, Pahari",food:"Dham, Siddu, Madra",places:"Shimla, Manali, Dharamshala, Spiti",festival:"Kullu Dussehra, Losar",best:"March to June and September to November",overview:"Himachal Pradesh is famous for mountains, snow, monasteries, adventure sports, apple valleys and peaceful towns.",tip:"For snow, visit in winter; for treks, choose clear-weather months."},
+      {id:"jharkhand",name:"Jharkhand",region:"east",image:defaultImage,subtitle:"Forests, waterfalls and minerals",language:"Hindi, Santali, Nagpuri",food:"Dhuska, Thekua, Rugra",places:"Ranchi, Netarhat, Deoghar, Betla",festival:"Sarhul, Karma",best:"October to March",overview:"Jharkhand is known for waterfalls, forests, tribal culture, temples and natural mineral wealth.",tip:"Ranchi waterfalls and Deoghar temple are popular highlights."},
+      {id:"karnataka",name:"Karnataka",region:"south",image:defaultImage,subtitle:"Heritage, tech cities and coffee hills",language:"Kannada",food:"Bisi Bele Bath, Mysore Pak, Dosa",places:"Bengaluru, Mysuru, Hampi, Coorg, Gokarna",festival:"Mysuru Dasara, Ugadi",best:"October to March",overview:"Karnataka mixes ancient heritage, coffee estates, beaches, temples, wildlife and modern technology cities.",tip:"Explore Hampi for history and Coorg for nature."},
+      {id:"kerala",name:"Kerala",region:"south",image:"https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=80",subtitle:"Backwaters, Ayurveda and green nature",language:"Malayalam",food:"Appam, Puttu, Sadya, Fish Curry",places:"Alleppey, Munnar, Kochi, Wayanad, Kovalam",festival:"Onam, Vishu, Thrissur Pooram",best:"September to March",overview:"Kerala is known for backwaters, Ayurveda, beaches, tea gardens, coconut trees and classical art.",tip:"Take a houseboat ride and try a traditional Sadya meal."},
+      {id:"madhyapradesh",name:"Madhya Pradesh",region:"central",image:defaultImage,subtitle:"Heart of India with heritage and wildlife",language:"Hindi",food:"Poha, Bhutte ka Kees, Dal Bafla",places:"Khajuraho, Bhopal, Sanchi, Kanha, Ujjain",festival:"Khajuraho Dance Festival, Simhastha",best:"October to March",overview:"Madhya Pradesh is rich in forts, temples, wildlife parks, ancient caves and spiritual cities.",tip:"Combine heritage sites with wildlife safaris."},
+      {id:"maharashtra",name:"Maharashtra",region:"west",image:defaultImage,subtitle:"Mumbai, forts, caves and food",language:"Marathi",food:"Vada Pav, Misal Pav, Puran Poli",places:"Mumbai, Pune, Ajanta, Ellora, Lonavala",festival:"Ganesh Chaturthi, Gudi Padwa",best:"October to March",overview:"Maharashtra includes financial capital Mumbai, hill forts, caves, beaches, cinema culture and powerful festivals.",tip:"Visit Mumbai for city life and Ajanta-Ellora for heritage."},
+      {id:"manipur",name:"Manipur",region:"northeast",image:defaultImage,subtitle:"Loktak Lake and graceful culture",language:"Meitei, English",food:"Eromba, Chamthong, Singju",places:"Imphal, Loktak Lake, Keibul Lamjao",festival:"Sangai Festival, Yaoshang",best:"October to April",overview:"Manipur is known for Loktak Lake, classical dance, martial traditions, handlooms and beautiful valleys.",tip:"Visit Loktak Lake and learn about the floating national park."},
+      {id:"meghalaya",name:"Meghalaya",region:"northeast",image:defaultImage,subtitle:"Clouds, caves and living root bridges",language:"English, Khasi, Garo",food:"Jadoh, Dohneiiong, Tungrymbai",places:"Shillong, Cherrapunji, Dawki, Mawlynnong",festival:"Wangala, Shad Suk Mynsiem",best:"October to April",overview:"Meghalaya is famous for rainfall, waterfalls, caves, clean villages, root bridges and green hills.",tip:"Dawki, Mawlynnong and root bridges are must-visit places."},
+      {id:"mizoram",name:"Mizoram",region:"northeast",image:defaultImage,subtitle:"Blue mountains and peaceful towns",language:"Mizo, English",food:"Bai, Sawhchiar, Bamboo Shoot dishes",places:"Aizawl, Champhai, Reiek, Phawngpui",festival:"Chapchar Kut, Mim Kut",best:"October to March",overview:"Mizoram is known for hills, bamboo forests, clean towns, music-loving people and peaceful culture.",tip:"Explore Aizawl and scenic hill viewpoints."},
+      {id:"nagaland",name:"Nagaland",region:"northeast",image:defaultImage,subtitle:"Tribal culture and Hornbill Festival",language:"English, Nagamese",food:"Smoked Pork, Bamboo Shoot, Axone",places:"Kohima, Dimapur, Dzukou Valley",festival:"Hornbill Festival, Sekrenyi",best:"October to May",overview:"Nagaland is known for tribal heritage, colorful festivals, music, hills and unique food culture.",tip:"Visit during Hornbill Festival for the richest cultural experience."},
+      {id:"odisha",name:"Odisha",region:"east",image:defaultImage,subtitle:"Temples, beaches and classical art",language:"Odia",food:"Dalma, Pakhala, Chhena Poda",places:"Puri, Konark, Bhubaneswar, Chilika Lake",festival:"Rath Yatra, Durga Puja",best:"October to March",overview:"Odisha is famous for Jagannath Temple, Konark Sun Temple, beaches, classical dance and handicrafts.",tip:"Visit Puri-Konark-Bhubaneswar as a golden triangle route."},
+      {id:"punjab",name:"Punjab",region:"north",image:"https://images.unsplash.com/photo-1609948543911-7f01ff385be5?auto=format&fit=crop&w=900&q=80",subtitle:"Golden Temple, bhangra and food",language:"Punjabi",food:"Makki di Roti, Sarson da Saag, Lassi",places:"Amritsar, Golden Temple, Wagah Border, Patiala",festival:"Baisakhi, Lohri, Gurpurab",best:"October to March",overview:"Punjab represents energy, farming culture, spirituality, bhangra, delicious food and warm hospitality.",tip:"Visit Golden Temple early morning and try local dhaba food."},
+      {id:"rajasthan",name:"Rajasthan",region:"west",image:"https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=900&q=80",subtitle:"Royal forts, deserts and palaces",language:"Hindi, Rajasthani, Marwari",food:"Dal Baati Churma, Laal Maas, Ghewar",places:"Jaipur, Udaipur, Jodhpur, Jaisalmer, Pushkar",festival:"Gangaur, Teej, Desert Festival",best:"October to March",overview:"Rajasthan is famous for royal history, forts, deserts, colorful clothes, folk dance and palace cities.",tip:"Try desert safari, palace tours and local markets."},
+      {id:"sikkim",name:"Sikkim",region:"northeast",image:defaultImage,subtitle:"Himalayan beauty and monasteries",language:"Nepali, English, Sikkimese",food:"Momos, Thukpa, Gundruk",places:"Gangtok, Pelling, Nathula, Yumthang",festival:"Losar, Saga Dawa",best:"March to June and September to November",overview:"Sikkim is known for clean mountain towns, monasteries, orchids, snow views and peaceful travel.",tip:"Check permits for border areas like Nathula Pass."},
+      {id:"tamilnadu",name:"Tamil Nadu",region:"south",image:"https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=900&q=80",subtitle:"Temples, classical art and heritage",language:"Tamil",food:"Dosa, Idli, Pongal, Filter Coffee",places:"Chennai, Madurai, Rameswaram, Ooty, Kanyakumari",festival:"Pongal, Tamil New Year, Thaipusam",best:"November to February",overview:"Tamil Nadu has ancient temples, classical music, Bharatanatyam, beaches, hill stations and deep history.",tip:"Respect temple dress codes and try food on banana leaves."},
+      {id:"telangana",name:"Telangana",region:"south",image:defaultImage,subtitle:"Hyderabad, biryani and heritage",language:"Telugu, Urdu",food:"Hyderabadi Biryani, Haleem, Sarva Pindi",places:"Hyderabad, Warangal, Charminar, Ramoji Film City",festival:"Bathukamma, Bonalu",best:"October to February",overview:"Telangana is known for Hyderabad heritage, biryani, forts, IT culture and colorful festivals.",tip:"Explore Charminar area and try authentic Hyderabadi biryani."},
+      {id:"tripura",name:"Tripura",region:"northeast",image:defaultImage,subtitle:"Palaces, temples and green hills",language:"Bengali, Kokborok",food:"Mui Borok, Wahan Mosdeng",places:"Agartala, Ujjayanta Palace, Neermahal",festival:"Kharchi Puja, Garia Puja",best:"October to March",overview:"Tripura offers royal palaces, temples, bamboo crafts, lakes and a mix of Bengali and tribal culture.",tip:"Visit Neermahal and Ujjayanta Palace."},
+      {id:"uttarpradesh",name:"Uttar Pradesh",region:"north",image:"https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80",subtitle:"Taj Mahal, Varanasi and history",language:"Hindi, Urdu",food:"Kachori, Kebabs, Petha, Chaat",places:"Agra, Varanasi, Lucknow, Prayagraj, Mathura",festival:"Kumbh, Holi, Diwali, Dev Deepawali",best:"October to March",overview:"Uttar Pradesh is rich in Mughal history, spiritual cities, temples, food culture and iconic monuments.",tip:"Visit Agra for Taj Mahal and Varanasi for Ganga Aarti."},
+      {id:"uttarakhand",name:"Uttarakhand",region:"north",image:"https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=900&q=80",subtitle:"Temples, mountains and yoga",language:"Hindi, Garhwali, Kumaoni",food:"Aloo Ke Gutke, Kafuli, Bal Mithai",places:"Kedarnath, Rishikesh, Nainital, Mussoorie",festival:"Kumbh, Ganga Dussehra",best:"March to June and September to November",overview:"Uttarakhand is known for Himalayan temples, yoga, trekking, rivers, forests and peaceful hill stations.",tip:"Check weather before temple routes and treks."},
+      {id:"westbengal",name:"West Bengal",region:"east",image:"https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=900&q=80",subtitle:"Durga Puja, sweets and Kolkata",language:"Bengali",food:"Rasgulla, Mishti Doi, Fish Curry, Kathi Roll",places:"Kolkata, Darjeeling, Sundarbans, Kalimpong",festival:"Durga Puja, Kali Puja, Poila Boishakh",best:"October to March",overview:"West Bengal is known for Kolkata heritage, Durga Puja, literature, music, sweets, tea gardens and Sundarbans.",tip:"Visit Kolkata during Durga Puja for unforgettable culture."}
+    ];
+    const foods=[
+      {id:"biryani",name:"Biryani",image:"https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=900&q=80",subtitle:"Aromatic rice classic",overview:"Biryani is a royal rice dish cooked with spices and regional styles.",language:"Food Region: Many states",food:"Hyderabadi, Lucknowi, Kolkata, Malabar",places:"Hyderabad, Lucknow, Kolkata, Kerala",festival:"Weddings and celebrations",best:"Anytime",tip:"Try different regional biryanis."},
+      {id:"dosa",name:"Dosa",image:"https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=900&q=80",subtitle:"Crispy South Indian favorite",overview:"Dosa is made from fermented rice-lentil batter and served with chutney and sambar.",language:"Food Region: South India",food:"Masala Dosa, Rava Dosa, Mysore Dosa",places:"Tamil Nadu, Karnataka, Kerala",festival:"Daily breakfast",best:"Breakfast",tip:"Eat it fresh and crispy."},
+      {id:"samosa",name:"Samosa",image:"https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80",subtitle:"India's favorite street snack",overview:"Samosa is a crispy snack filled with spicy potatoes or other fillings.",language:"Street Food",food:"Aloo Samosa, Punjabi Samosa",places:"Across India",festival:"Tea-time snack",best:"Evening",tip:"Best with chutney and chai."},
+      {id:"thali",name:"Indian Thali",image:"https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=900&q=80",subtitle:"A complete Indian meal",overview:"Thali includes roti, rice, dal, sabzi, pickle, curd and sweet.",language:"Food Culture: All India",food:"Rajasthani, Gujarati, Punjabi, South Indian",places:"Across India",festival:"Daily meals and feasts",best:"Lunch",tip:"Try regional thalis."}
+    ];
+    const places=[
+      {id:"taj",name:"Taj Mahal",image:"https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80",subtitle:"The iconic monument of love",overview:"The Taj Mahal is famous worldwide for white marble beauty and Mughal architecture.",language:"Location: Agra",food:"Petha, Mughlai food",places:"Taj Mahal, Agra Fort, Mehtab Bagh",festival:"Sunrise visits",best:"October to March",tip:"Visit early morning."},
+      {id:"varanasi",name:"Varanasi",image:"https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=900&q=80",subtitle:"Spiritual heart of India",overview:"Varanasi is known for ghats, temples and Ganga Aarti.",language:"Hindi, Bhojpuri",food:"Kachori, Lassi, Banarasi Paan",places:"Dashashwamedh Ghat, Kashi Vishwanath, Sarnath",festival:"Dev Deepawali",best:"October to March",tip:"Take a sunrise boat ride."},
+      {id:"himalayas",name:"Himalayas",image:"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",subtitle:"Mountains, peace and adventure",overview:"The Himalayas offer snow peaks, valleys, treks, rivers and peaceful villages.",language:"Many local languages",food:"Pahadi food, momos, tea",places:"Kashmir, Himachal, Uttarakhand, Sikkim",festival:"Local mountain fairs",best:"March to June and September to November",tip:"Respect mountain safety."},
+      {id:"delhi",name:"Historic Delhi",image:"https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=900&q=80",subtitle:"Old and modern India together",overview:"Delhi has monuments, markets, food streets, museums and modern city life.",language:"Hindi, English, Punjabi, Urdu",food:"Chole Bhature, Chaat, Kebabs",places:"Red Fort, India Gate, Qutub Minar",festival:"Republic Day, Diwali, Eid",best:"October to March",tip:"Use metro for easy travel."}
+    ];
+    const regions={north:"North India",west:"West India",central:"Central India",east:"East India",south:"South India",northeast:"Northeast India"};
+    const allDetails={};[...states,...foods,...places].forEach(x=>allDetails[x.id]=x);
+    const statesGrid=document.getElementById("statesGrid"),foodGrid=document.getElementById("foodGrid"),placesGrid=document.getElementById("placesGrid"),searchInput=document.getElementById("searchInput"),clearSearch=document.getElementById("clearSearch"),themeBtn=document.getElementById("themeBtn"),modal=document.getElementById("detailModal"),closeModal=document.getElementById("closeModal"),modalHero=document.getElementById("modalHero"),modalTitle=document.getElementById("modalTitle"),modalSubtitle=document.getElementById("modalSubtitle"),modalContent=document.getElementById("modalContent"),mapTitle=document.getElementById("mapTitle"),mapText=document.getElementById("mapText"),mapDetails=document.getElementById("mapDetails");
+    function cardTemplate(item,type){return `<article class="card searchable" data-id="${item.id}" data-region="${item.region||type}" data-search="${item.name} ${item.subtitle} ${item.language||""} ${item.food||""} ${item.places||""} ${item.festival||""}"><img src="${item.image}" alt="${item.name}" loading="lazy"><div class="card-content"><h3>${item.name}</h3><p>${item.subtitle}</p><span class="tag">Open Details</span></div></article>`}
+    function render(){statesGrid.innerHTML=states.map(x=>cardTemplate(x,"state")).join("");foodGrid.innerHTML=foods.map(x=>cardTemplate(x,"food")).join("");placesGrid.innerHTML=places.map(x=>cardTemplate(x,"place")).join("");attachCards();}
+    function attachCards(){document.querySelectorAll("[data-id]").forEach(item=>item.addEventListener("click",()=>openDetail(item.getAttribute("data-id"))));}
+    function openDetail(id){const d=allDetails[id];if(!d)return;modalHero.style.backgroundImage=`url('${d.image}')`;modalTitle.textContent=d.name;modalSubtitle.textContent=d.subtitle;modalContent.innerHTML=`<p>${d.overview}</p><div class="detail-grid"><div class="detail-box"><h4>Language / Region</h4><p>${d.language}</p></div><div class="detail-box"><h4>Famous Food</h4><p>${d.food}</p></div><div class="detail-box"><h4>Top Places</h4><p>${d.places}</p></div><div class="detail-box"><h4>Festivals / Culture</h4><p>${d.festival}</p></div><div class="detail-box"><h4>Best Time</h4><p>${d.best}</p></div><div class="detail-box"><h4>Travel Tip</h4><p>${d.tip}</p></div></div><button class="btn" onclick="closeDetail()">Back to Website</button>`;modal.classList.add("open");modal.setAttribute("aria-hidden","false");}
+    function closeDetail(){modal.classList.remove("open");modal.setAttribute("aria-hidden","true");}
+    closeModal.addEventListener("click",closeDetail);modal.addEventListener("click",e=>{if(e.target===modal)closeDetail()});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDetail()});
+    function filterCards(region="all",query=""){document.querySelectorAll(".searchable").forEach(item=>{const regionMatch=region==="all"||item.getAttribute("data-region")===region||!["north","west","central","east","south","northeast"].includes(item.getAttribute("data-region"));const text=(item.getAttribute("data-search")+" "+item.innerText).toLowerCase();const queryMatch=!query||text.includes(query.toLowerCase());item.classList.toggle("hidden",!(regionMatch&&queryMatch));});}
+    searchInput.addEventListener("input",()=>filterCards(document.querySelector(".chip.active").dataset.region,searchInput.value.trim()));clearSearch.addEventListener("click",()=>{searchInput.value="";document.querySelectorAll(".chip").forEach(c=>c.classList.remove("active"));document.querySelector('[data-region="all"]').classList.add("active");filterCards("all","");});
+    document.querySelectorAll(".chip").forEach(chip=>chip.addEventListener("click",()=>{document.querySelectorAll(".chip").forEach(c=>c.classList.remove("active"));chip.classList.add("active");filterCards(chip.dataset.region,searchInput.value.trim());}));
+    document.querySelectorAll(".map-btn").forEach(btn=>btn.addEventListener("click",()=>openRegion(btn.dataset.map)));
+    function openRegion(region){const list=states.filter(s=>s.region===region);mapTitle.textContent=regions[region];mapText.textContent=`${regions[region]} has ${list.length} states in this guide. Tap any state name below to open details.`;mapDetails.innerHTML=list.map(s=>`<div class="mini-item" onclick="openDetail('${s.id}')"><strong>${s.name}</strong><span>${s.subtitle}</span></div>`).join("");document.querySelectorAll(".chip").forEach(c=>c.classList.remove("active"));document.querySelector(`[data-region="${region}"]`).classList.add("active");filterCards(region,"");document.getElementById("states").scrollIntoView({behavior:"smooth"});}
+    themeBtn.addEventListener("click",()=>{document.body.classList.toggle("dark");themeBtn.textContent=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";});
+    function sendMessage(event){event.preventDefault();document.getElementById("formStatus").textContent="Thank you! Your message is ready. Add email service later to receive real messages.";event.target.reset();}
+    window.closeDetail=closeDetail;window.openDetail=openDetail;render();openRegion("north");filterCards("all","");
   </script></body>
   </html>
