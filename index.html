@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore India | States, Culture, Food & Places</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #fffaf3;
+      color: #1f2933;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 8%;
+      background: rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(8px);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #ff9933;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffdd8a;
+    }
+
+    .hero {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 0 8%;
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 34px;
+      color: #f5f5f5;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff9933, #138808);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 46px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      color: #111827;
+    }
+
+    .section-title p {
+      max-width: 650px;
+      margin: 12px auto 0;
+      color: #5b6472;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+    }
+
+    .card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 22px;
+    }
+
+    .card-content h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+      color: #0f172a;
+    }
+
+    .card-content p {
+      color: #64748b;
+      font-size: 15px;
+    }
+
+    .culture {
+      background: #ffffff;
+    }
+
+    .feature-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 26px;
+    }
+
+    .feature {
+      background: #fff7ed;
+      padding: 28px;
+      border-radius: 24px;
+      border: 1px solid #fed7aa;
+    }
+
+    .feature h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .feature .icon {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .food {
+      background: linear-gradient(180deg, #fffaf3, #f0fff4);
+    }
+
+    .places {
+      background: #ffffff;
+    }
+
+    .quote {
+      text-align: center;
+      background: linear-gradient(135deg, #ff9933, #ffffff, #138808);
+      padding: 70px 8%;
+    }
+
+    .quote h2 {
+      font-size: 36px;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+
+    .quote p {
+      font-size: 18px;
+      color: #374151;
+      font-weight: 600;
+    }
+
+    footer {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 30px 8%;
+    }
+
+    footer span {
+      color: #ff9933;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      nav ul {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header id="home">
+    <nav>
+      <div class="logo">Explore <span>India</span></div>
+      <ul>
+        <li><a href="#states">States</a></li>
+        <li><a href="#culture">Culture</a></li>
+        <li><a href="#food">Food</a></li>
+        <li><a href="#places">Places</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-content">
+        <h1>Discover the Soul of India</h1>
+        <p>Explore India's colorful states, rich culture, delicious food, and unforgettable places — all in one beautiful journey.</p>
+        <a href="#states" class="btn">Start Exploring</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="states">
+    <div class="section-title">
+      <h2>States of India</h2>
+      <p>Every state has its own language, tradition, dress, food, music and story.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=900&q=80" alt="Rajasthan" />
+        <div class="card-content">
+          <h3>Rajasthan</h3>
+          <p>Land of royal forts, deserts, colorful turbans, folk music and grand palaces.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=80" alt="Kerala" />
+        <div class="card-content">
+          <h3>Kerala</h3>
+          <p>Known for backwaters, coconut trees, Ayurveda, Kathakali and peaceful nature.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&fit=crop&w=900&q=80" alt="Punjab" />
+        <div class="card-content">
+          <h3>Punjab</h3>
+          <p>Full of energy, farming culture, bhangra, Golden Temple and warm hospitality.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=900&q=80" alt="Uttarakhand" />
+        <div class="card-content">
+          <h3>Uttarakhand</h3>
+          <p>A beautiful Himalayan state with temples, rivers, mountains and spiritual places.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="culture" id="culture">
+    <div class="section-title">
+      <h2>Indian Culture</h2>
+      <p>India's culture is a beautiful mix of festivals, art, dance, music, spirituality and family values.</p>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature">
+        <div class="icon">🎉</div>
+        <h3>Festivals</h3>
+        <p>Diwali, Holi, Eid, Christmas, Baisakhi, Onam and many more festivals bring people together.</p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">💃</div>
+        <h3>Dance & Music</h3>
+        <p>From Bharatanatyam to Bhangra, Indian art forms show emotion, devotion and celebration.</p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">🛕</div>
+        <h3>Traditions</h3>
+        <p>Namaste, respect for elders, family bonding and spiritual values are part of Indian life.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="food" id="food">
+    <div class="section-title">
+      <h2>Food of India</h2>
+      <p>Indian food is famous for spices, flavors, colors and variety from every region.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=900&q=80" alt="Biryani" />
+        <div class="card-content">
+          <h3>Biryani</h3>
+          <p>Aromatic rice dish with spices, herbs and rich regional styles.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=900&q=80" alt="Dosa" />
+        <div class="card-content">
+          <h3>Dosa</h3>
+          <p>South India's crispy classic served with chutney and sambar.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80" alt="Samosa" />
+        <div class="card-content">
+          <h3>Samosa</h3>
+          <p>A popular street snack filled with spicy potatoes and served hot.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=900&q=80" alt="Indian Thali" />
+        <div class="card-content">
+          <h3>Indian Thali</h3>
+          <p>A complete meal with roti, rice, dal, sabzi, pickle, sweet and more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="places" id="places">
+    <div class="section-title">
+      <h2>Famous Places</h2>
+      <p>India has mountains, beaches, temples, forts, forests, cities and peaceful villages.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80" alt="Taj Mahal" />
+        <div class="card-content">
+          <h3>Taj Mahal</h3>
+          <p>A world-famous symbol of love and one of India's most iconic monuments.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1506461883276-594a12b11cf3?auto=format&fit=crop&w=900&q=80" alt="Varanasi" />
+        <div class="card-content">
+          <h3>Varanasi</h3>
+          <p>One of the world's oldest living cities, known for ghats, Ganga Aarti and spirituality.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80" alt="Goa" />
+        <div class="card-content">
+          <h3>Goa</h3>
+          <p>Beautiful beaches, nightlife, seafood, churches and relaxed coastal vibes.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=900&q=80" alt="Himalayas" />
+        <div class="card-content">
+          <h3>Himalayas</h3>
+          <p>Snowy mountains, peaceful valleys, adventure treks and spiritual destinations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="quote">
+    <h2>India is not just a country, it is an emotion.</h2>
+    <p>Unity in Diversity • Culture • Heritage • Pride</p>
+  </div>
+
+  <footer>
+    <p>Made with ❤️ for <span>India</span> | Explore India</p>
+  </footer>
+</body>
+</html>
